@@ -21,7 +21,7 @@ def requirements():
 
 about = get_about()
 setup(
-    name="stopwatch",
+    name="python-stopwatch",
     version=about['__version__'],
     author=about['__author__'],
     author_email='soy.lovit@gmail.com',
