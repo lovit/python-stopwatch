@@ -1,8 +1,17 @@
 # Python-Stopwatch
 
+## Install
+
+- from source
+```
+git clone https://github.com/lovit/python-stopwatch
+cd python-stopwatch
+python setup.py install
+```
+
 ## Usage
 
-`log` function print message attached elapsed time and write it to `logpath`
+- `log` function print message attached elapsed time and write it to `logpath`
 ```python
 from stopwatch import Stopwatch
 
@@ -15,7 +24,7 @@ with Stopwatch('Task description', logpath='log.txt') as t:
 [Task description] 1.002 sec. write result with record time to `logpath`
 ```
 
-`log` function in silent mode Stopwatch just write message attached elapsed time to `logpath`
+- `log` function in silent mode Stopwatch just write message attached elapsed time to `logpath`
 ```python
 with Stopwatch('Task description', logpath='log_silent.txt', silent=True) as t:
     # do some tasks
@@ -23,7 +32,7 @@ with Stopwatch('Task description', logpath='log_silent.txt', silent=True) as t:
     t.log('write result with record time to `logpath`, but not print')
 ```
 
-`record` function only print `message` and elapsed time
+- `record` function only print `message` and elapsed time
 ```python
 with Stopwatch('Task description') as t:
     # do some tasks
@@ -34,7 +43,7 @@ with Stopwatch('Task description') as t:
 [Task description] 1.001 sec. print messages with record time
 ```
 
-With current time
+- With current time
 ```python
 with Stopwatch('Task description', now=True) as t:
     # do some tasks
@@ -45,7 +54,7 @@ with Stopwatch('Task description', now=True) as t:
 [Task description] [2020-11-28 08:05:20] 1.001 sec. print messages with record time
 ```
 
-Without `description`
+- Without `description`
 ```python
 with Stopwatch(now=True) as t:
     # do some tasks
@@ -56,7 +65,7 @@ with Stopwatch(now=True) as t:
 [2020-11-28 08:05:24] 1.001 sec. print messages with record time
 ```
 
-Use as Python package
+- Use as Python package
 ```python
 stopwatch = Stopwatch('Task description', now=True)
 for n_iter in range(5):
